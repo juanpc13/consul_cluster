@@ -29,3 +29,10 @@ envsubst < "config.json.bk" > $CONFIG_DIR/config.json
 
 #Verificar Nodos
 ./consul members
+
+#Agregar y Obtener key-value a la Base de Datos
+./consul kv put valor 713
+./consul kv get valor
+
+./consul kv put atol @/home/jcpleitez/parcial1_pdc135/vm/local/named.conf.local.atol
+./consul kv get atol
